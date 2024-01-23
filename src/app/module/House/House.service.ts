@@ -6,15 +6,19 @@ const createHouseService =async (data:IHouse) : Promise<IHouse | any> => {
     return result;
 }
 const getSingleHouse = async(id : string) : Promise<IHouse | any> =>{
-    const result = await HouseModel.find({})
+    const result = await HouseModel.find({_id : id})
     return result
 }
 const getSingleUserHouse = async(email : string) : Promise<IHouse | any> =>{
     const result = await HouseModel.find({email});
     return result
 }
+const getAlluserHouse = async() : Promise<IHouse | any> =>{
+    const result = await HouseModel.find({});
+    return result
+}
 
 
 export const HouseServices = {
-    createHouseService,getSingleHouse,getSingleUserHouse
+    createHouseService,getSingleHouse,getSingleUserHouse,getAlluserHouse
 }

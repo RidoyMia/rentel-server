@@ -25,7 +25,33 @@ const getSingleHouseController = async(req:Request,res:Response,next: NextFuncti
         
     }
 }
+const getSingleUserHouseController = async(req:Request,res:Response,next: NextFunction)=>{
+    try {
+        const email = req.params.email;
+       
+        const result = await HouseServices.getSingleUserHouse(email);
+        res.status(200).send({
+            data : true,
+          result
+        })
+    } catch (error) {
+        
+    }
+}
+const getAlluserHouseController = async(req:Request,res:Response,next: NextFunction)=>{
+    try {
+        
+       
+        const result = await HouseServices.getAlluserHouse();
+        res.status(200).send({
+            data : true,
+          result
+        })
+    } catch (error) {
+        
+    }
+}
 
 export const HouseController = {
-    createHouseController,getSingleHouseController
+    createHouseController,getSingleHouseController,getSingleUserHouseController,getAlluserHouseController
 }

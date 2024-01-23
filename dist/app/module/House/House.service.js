@@ -16,7 +16,7 @@ const createHouseService = (data) => __awaiter(void 0, void 0, void 0, function*
     return result;
 });
 const getSingleHouse = (id) => __awaiter(void 0, void 0, void 0, function* () {
-    const result = yield House_model_1.HouseModel.findById({ _id: id });
+    const result = yield House_model_1.HouseModel.find({});
     return result;
 });
 const getSingleUserHouse = (email) => __awaiter(void 0, void 0, void 0, function* () {
