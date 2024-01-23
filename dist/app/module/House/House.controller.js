@@ -26,7 +26,8 @@ const createHouseController = (req, res, next) => __awaiter(void 0, void 0, void
 const getSingleHouseController = (req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         const id = req.params.id;
-        const result = yield House_service_1.HouseServices.getSingleHouse(id);
+        console.log(id, 'diid');
+        // const result = await HouseServices.getSingleHouse(id);
         res.status(200).send({
             data: true,
             toi: "ami"

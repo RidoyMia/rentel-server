@@ -16,10 +16,10 @@ const getSingleHouseController = async(req:Request,res:Response,next: NextFuncti
     try {
         const id = req.params.id;
         console.log(id,'diid')
-        // const result = await HouseServices.getSingleHouse(id);
+        const result = await HouseServices.getSingleHouse(id);
         res.status(200).send({
             data : true,
-            toi :"ami"
+          result
         })
     } catch (error) {
         
