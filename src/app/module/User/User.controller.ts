@@ -9,9 +9,9 @@ import { config } from "../../../config";
 const createUserController = async(req:Request,res:Response,next:NextFunction) : Promise<IUser | any> =>{
     try {
         const userData : IUser = req.body;
-        console.log(userData )
+        console.log(userData,'data' )
         const result = await UserServices.createUser(userData);
-       
+       console.log(result,'resul;t')
         // const token = await jwt.sign()
         res.status(200).send({
             data : true,

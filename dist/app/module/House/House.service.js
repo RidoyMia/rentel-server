@@ -16,13 +16,17 @@ const createHouseService = (data) => __awaiter(void 0, void 0, void 0, function*
     return result;
 });
 const getSingleHouse = (id) => __awaiter(void 0, void 0, void 0, function* () {
-    const result = yield House_model_1.HouseModel.find({});
+    const result = yield House_model_1.HouseModel.find({ _id: id });
     return result;
 });
 const getSingleUserHouse = (email) => __awaiter(void 0, void 0, void 0, function* () {
     const result = yield House_model_1.HouseModel.find({ email });
     return result;
 });
+const getAlluserHouse = () => __awaiter(void 0, void 0, void 0, function* () {
+    const result = yield House_model_1.HouseModel.find({});
+    return result;
+});
 exports.HouseServices = {
-    createHouseService, getSingleHouse, getSingleUserHouse
+    createHouseService, getSingleHouse, getSingleUserHouse, getAlluserHouse
 };

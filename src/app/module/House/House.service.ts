@@ -18,7 +18,11 @@ const getAlluserHouse = async() : Promise<IHouse | any> =>{
     return result
 }
 
+const deletedSingleHouse = async(id : string) : Promise<IHouse | any> =>{
+    const result = await HouseModel.deleteOne({_id : id})
+    return result
+}
 
 export const HouseServices = {
-    createHouseService,getSingleHouse,getSingleUserHouse,getAlluserHouse
+    createHouseService,getSingleHouse,getSingleUserHouse,getAlluserHouse,deletedSingleHouse
 }

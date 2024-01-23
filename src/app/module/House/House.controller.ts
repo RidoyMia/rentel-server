@@ -25,6 +25,20 @@ const getSingleHouseController = async(req:Request,res:Response,next: NextFuncti
         
     }
 }
+
+const deletedSingleHouseController = async(req:Request,res:Response,next: NextFunction)=>{
+    try {
+        const id = req.params.id;
+        console.log(id,'diid')
+        const result = await HouseServices.deletedSingleHouse(id);
+        res.status(200).send({
+            data : true,
+          result
+        })
+    } catch (error) {
+        
+    }
+}
 const getSingleUserHouseController = async(req:Request,res:Response,next: NextFunction)=>{
     try {
         const email = req.params.email;
@@ -53,5 +67,5 @@ const getAlluserHouseController = async(req:Request,res:Response,next: NextFunct
 }
 
 export const HouseController = {
-    createHouseController,getSingleHouseController,getSingleUserHouseController,getAlluserHouseController
+    createHouseController,getSingleHouseController,getSingleUserHouseController,getAlluserHouseController,deletedSingleHouseController
 }

@@ -36,6 +36,29 @@ const getSingleHouseController = (req, res, next) => __awaiter(void 0, void 0, v
     catch (error) {
     }
 });
+const getSingleUserHouseController = (req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
+    try {
+        const email = req.params.email;
+        const result = yield House_service_1.HouseServices.getSingleUserHouse(email);
+        res.status(200).send({
+            data: true,
+            result
+        });
+    }
+    catch (error) {
+    }
+});
+const getAlluserHouseController = (req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
+    try {
+        const result = yield House_service_1.HouseServices.getAlluserHouse();
+        res.status(200).send({
+            data: true,
+            result
+        });
+    }
+    catch (error) {
+    }
+});
 exports.HouseController = {
-    createHouseController, getSingleHouseController
+    createHouseController, getSingleHouseController, getSingleUserHouseController, getAlluserHouseController
 };
