@@ -15,7 +15,8 @@ const createHouseController = async(req:Request,res:Response,next: NextFunction)
 const getSingleHouseController = async(req:Request,res:Response,next: NextFunction)=>{
     try {
         const id = req.params.id;
-        const result = await HouseServices.getSingleHouse(id);
+        console.log(id,'diid')
+        // const result = await HouseServices.getSingleHouse(id);
         res.status(200).send({
             data : true,
             toi :"ami"

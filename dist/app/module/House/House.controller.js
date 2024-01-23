@@ -29,7 +29,7 @@ const getSingleHouseController = (req, res, next) => __awaiter(void 0, void 0, v
         const result = yield House_service_1.HouseServices.getSingleHouse(id);
         res.status(200).send({
             data: true,
-            result
+            toi: "ami"
         });
     }
     catch (error) {
