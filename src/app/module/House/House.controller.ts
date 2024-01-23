@@ -18,7 +18,7 @@ const getSingleHouseController = async(req:Request,res:Response,next: NextFuncti
         const result = await HouseServices.getSingleHouse(id);
         res.status(200).send({
             data : true,
-            result
+            toi :"ami"
         })
     } catch (error) {
         

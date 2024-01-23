@@ -14,8 +14,8 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.UserController = void 0;
 const User_service_1 = require("./User.service");
-const config_1 = require("../../../../config");
 const jsonwebtoken_1 = __importDefault(require("jsonwebtoken"));
+const config_1 = require("../../../config");
 const createUserController = (req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         const userData = req.body;

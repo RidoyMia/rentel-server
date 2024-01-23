@@ -1,8 +1,9 @@
 import express,{Request,Response,NextFunction} from "express"
 import { ILogin, IUser } from "./User.interface"
 import { UserServices } from "./User.service";
-import { config } from "../../../../config";
+
 import jwt, { Secret } from "jsonwebtoken"
+import { config } from "../../../config";
 
 
 const createUserController = async(req:Request,res:Response,next:NextFunction) : Promise<IUser | any> =>{
